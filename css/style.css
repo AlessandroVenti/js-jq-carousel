@@ -22,7 +22,7 @@
 }
 .slider-wrapper .images img {
     display: none;
-    height: 100%;
+    width: 80%;
 }
 
 .prev, .next {
@@ -33,6 +33,7 @@
     transform: translateY(-50%);
     font-size: 100px;
     cursor: pointer;
+    width: 
 }
 
 .slider-wrapper .images img.js-active-image {
