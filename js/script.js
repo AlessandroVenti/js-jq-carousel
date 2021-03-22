@@ -25,17 +25,30 @@ function slideNextImage() {
      
 }
 
+
+
 function slidePrevImage() {
      
      var $activeImage = $('.js-active-image');
 
-     if 
+     if ( $activeImage.hasClass('js-first')) {
 
-     var $prevImage = $activeImage.prev('img');
+          var $prevImage = $('img.js-last');
 
-     $activeImage.removeClass('js-active-image');
+          $activeImage.removeClass('js-active-image');
 
-     $prevImage.addClass('js-active-image');
+          $prevImage.addClass('js-active-image');
+
+     } else {
+
+          var $prevImage = $activeImage.prev('img');
+
+          $activeImage.removeClass('js-active-image');
+
+          $prevImage.addClass('js-active-image');
+
+     }
+
 }
 
 
