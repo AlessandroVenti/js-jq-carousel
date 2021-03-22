@@ -2,9 +2,11 @@
 
 function slideNextImage() {
 
+     var $activeImage = $('.js-active-image');
+
      if ( $activeImage.hasClass('js-last') ) {
 
-          var $nextImage = $(activeImage.first);
+          var $nextImage = $('img.js-first');
 
           $activeImage.removeClass('js-active-image');
           
@@ -13,22 +15,21 @@ function slideNextImage() {
 
      } else {
 
+          var $nextImage = $activeImage.next('img');
+
+          $activeImage.removeClass('js-active-image');
+
+          $nextImage.addClass('js-active-image');
 
      }
      
-     var $activeImage = $('.js-active-image');
-
-     var $nextImage = $activeImage.next('img');
-     
-     console.log($nextImage);
-
-     $activeImage.removeClass('js-active-image');
-     $nextImage.addClass('js-active-image');
 }
 
 function slidePrevImage() {
      
      var $activeImage = $('.js-active-image');
+
+     if 
 
      var $prevImage = $activeImage.prev('img');
 
