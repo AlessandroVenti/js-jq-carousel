@@ -33,7 +33,6 @@
     transform: translateY(-50%);
     font-size: 100px;
     cursor: pointer;
-    width: 
 }
 
 .slider-wrapper .images img.js-active-image {
@@ -42,6 +41,14 @@
 .next {
     left: auto;
     right: 0;
+}
+
+.circles {
+    text-align: center;
+}
+
+.js-active-circle {
+    color: blue;
 }
 .nav {
     position: absolute;

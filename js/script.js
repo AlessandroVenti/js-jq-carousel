@@ -2,52 +2,81 @@
 
                        
 
-function slideNextImage() {
+function slideNextImageAndCircle() {
 
      var $activeImage = $('.js-active-image');
 
-     if ( $activeImage.hasClass('js-last') ) {
+     var $activeCircle = $('.js-active-circle');
 
-          var $nextImage = $('img.js-first');
+     if ( $activeImage.hasClass('js-last-image') ) {
+
+          var $nextImage = $('img.js-first-image');
+
+          var $nextCircle = $('i.js-first-circle');
 
           $activeImage.removeClass('js-active-image');
           
           $nextImage.addClass('js-active-image');
+
+          $activeCircle.removeClass('js-active-circle');
+
+          $nextCircle.addClass('js-active-circle');
 
 
      } else {
 
           var $nextImage = $activeImage.next('img');
 
+          var $nextCircle = $activeCircle.next('i');
+
           $activeImage.removeClass('js-active-image');
 
           $nextImage.addClass('js-active-image');
 
+          $activeCircle.removeClass('js-active-circle');
+
+          $nextCircle.addClass('js-active-circle');
+
      }
-     
+
 }
 
 
 
-function slidePrevImage() {
+function slidePrevImageAndCircle() {
      
      var $activeImage = $('.js-active-image');
 
-     if ( $activeImage.hasClass('js-first')) {
+     var $activeCircle = $('.js-active-circle');
 
-          var $prevImage = $('img.js-last');
+
+     if ( $activeImage.hasClass('js-first-image')) {
+
+          var $prevImage = $('img.js-last-image');
+          
+          var $prevCircle = $('i.js-last-circle');
 
           $activeImage.removeClass('js-active-image');
 
           $prevImage.addClass('js-active-image');
+          
+          $activeCircle.removeClass('js-active-circle');
+
+          $prevCircle.addClass('js-active-circle');
 
      } else {
 
           var $prevImage = $activeImage.prev('img');
 
+          var $prevCircle = $activeCircle.prev('i');
+
           $activeImage.removeClass('js-active-image');
 
           $prevImage.addClass('js-active-image');
+
+          $activeCircle.removeClass('js-active-circle');
+
+          $prevCircle.addClass('js-active-circle');
 
      }
 
@@ -55,13 +84,14 @@ function slidePrevImage() {
 
 
 
-function slideImages () {
+function slideImagesAndCircles () {
 
-     $('.next').click(slideNextImage);
+     $('.next').click(slideNextImageAndCircle);
 
-     $('.prev').click(slidePrevImage);
+     $('.prev').click(slidePrevImageAndCircle);
 
 }
 
 
-$(document).ready(slideImages);
+$(document).ready(slideImagesAndCircles);
+
